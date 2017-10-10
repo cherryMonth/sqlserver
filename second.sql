@@ -30,7 +30,6 @@
 -- select EmployeeID ,COUNT(*) from Orders where  OrderDate >= '1997-10-1' and OrderDate <= '1997-10-7' group by EmployeeID having COUNT(*) >=0 order by COUNT(*) desc ;
 
 -- （11）请查询平均价格在及以上的产品类型
--- select AVG(UnitPrice) from (select CategoryID from Products group by CategoryID);
-
---select CategoryID ,UnitPrice from Products;
---select CategoryID ,UnitPrice from Products group by CategoryID;
+-- select AVG(UnitPrice) from Products /*计算平均价格*/
+-- select AVG(UnitPrice) as 平均价格 from Products group by CategoryID; /*计算所有种类的平均价格*/
+-- select b.* from (select AVG(UnitPrice) as 平均价格 from Products group by CategoryID) b where b.平均价格> (select AVG(UnitPrice) from Products); /*在所有平均价格之中进行筛选*/
