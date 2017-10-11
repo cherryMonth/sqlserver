@@ -32,4 +32,4 @@
 -- （11）请查询平均价格在及以上的产品类型
 -- select AVG(UnitPrice) from Products /*计算平均价格*/
 -- select AVG(UnitPrice) as 平均价格 from Products group by CategoryID; /*计算所有种类的平均价格*/
--- select b.* from (select AVG(UnitPrice) as 平均价格 from Products group by CategoryID) b where b.平均价格> (select AVG(UnitPrice) from Products); /*在所有平均价格之中进行筛选*/
+-- select b.CategoryID,b.平均价格 from (select CategoryID,AVG(UnitPrice) as 平均价格 from Products group by CategoryID) b where b.平均价格> (select AVG(UnitPrice) from Products); /*在所有平均价格之中进行筛选*/
