@@ -1,4 +1,8 @@
-/*
+create database miku
+go
+use miku
+go
+
 create table TAB1(
 COL1 smallint,
 COL2 int,
@@ -35,6 +39,3 @@ create table SC /* 学生选课表 */
   foreign key(Cno) references Course(Cno)
 );
 
-
-
-*/
