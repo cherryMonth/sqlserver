@@ -1,5 +1,6 @@
-create database miku
-go
+
+-- create database miku
+-- go
 use miku
 go
 

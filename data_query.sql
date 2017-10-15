@@ -65,6 +65,7 @@
 -- select Cno,COUNT(Sno) from SC group by Cno;
 
 
+select Sname from student where Sno in (select Sno from SC where Cno='2')
 
 
 
