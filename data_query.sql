@@ -65,8 +65,9 @@
 -- select Cno,COUNT(Sno) from SC group by Cno;
 
 
-select Sname from student where Sno in (select Sno from SC where Cno='2')
+select Sname from student where Sno in (select Sno from SC where Cno='2');
 
+select Sno, Cno from SC x where Grade>=(select AVG(grade) from SC y where y.sno=x.sno);
 
 
 
